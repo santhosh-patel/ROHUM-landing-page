@@ -1,0 +1,69 @@
+/* always import fonts on top */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import "tailwindcss";
+/* very imp for using the dark selector */
+@custom-variant dark (&:where(.dark, .dark *)); 
+
+
+* {
+    /* padding: 0; */
+    /* margin: 0; */
+    font-family: "Poppins", "Courier New";
+    box-sizing: border-box;
+  }
+  
+  @layer base {
+    :root {
+        --background: #f9fafb;
+        --purple-foreground:#9333ea;
+        --foreground: black;
+        --border: 240 5.9% 90%;
+        }
+    .dark {
+        --background: black;
+        --purple-foreground:#9333ea;
+        --foreground: #f9fafb;
+        --border: 240 3.7% 15.9%;
+    }
+  }
+  .animate-gradient {
+    background-size: 300%;
+    -webkit-animation: animatedgradient 6s ease infinite alternate;
+    -moz-animation: animatedgradient 6s ease infinite alternate;
+    animation: animatedgradient 6s ease infinite alternate;
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-scale{
+    animation: animatedScale 2s ease infinite;
+}
+@keyframes animatedScale {
+    0% {
+        /* background-position: 0% 50%; */
+        /* scale: 0; */
+        transform: translateY(-10px);
+        /* display: ; */
+    }
+    
+    50% {
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+
