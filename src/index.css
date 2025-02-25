@@ -99,3 +99,19 @@ inherits: false;
         --angle:360deg;
     }
   }
+
+
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+    /* gap: 20px; */
+    /* border: 1px solid red; */
+  }
+  .embla__slide {
+    flex: 0 0 50%;
+    min-width: 0;
+    user-select: none;
+    /* border: 1px solid blue; */
+  }

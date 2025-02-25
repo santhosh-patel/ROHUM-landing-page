@@ -8,6 +8,7 @@ import { FaEthereum } from "react-icons/fa";
 import { GiMoneyStack } from "react-icons/gi";
 import { GiTeacher } from "react-icons/gi";
 import { motion } from "framer-motion";
+import SectionHeading from "../Components/SectionHeading";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -89,11 +90,7 @@ const Features = () => {
 
   return (
     <div className="min-h-screen scroll-div mt-20 p-5">
-      <h3 className="text-center dark:text-gray-500 lg:text-xl font-bold !font-mono">
-        AI FEATURES
-      </h3>
-      <h1 className="text-center text-5xl lg:text-7xl mb-20">Features</h1>
-
+      <SectionHeading smallHeading="AI FEATURES" mainHeading="Features" />
       <div
         ref={containerRef}
         className="md:justify-center md:gap-10 lg:gap-0 lg:justify-between h-[250vh] lg:h-[300vh] cards-div w-full flex items-start relative"

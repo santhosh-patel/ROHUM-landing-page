@@ -12,6 +12,8 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@tailwindcss/vite": "^4.0.6",
+    "embla-carousel-autoplay": "^8.5.2",
+    "embla-carousel-react": "^8.5.2",
     "framer-motion": "^12.4.7",
     "lottie-react": "^2.4.1",
     "react": "^19.0.0",

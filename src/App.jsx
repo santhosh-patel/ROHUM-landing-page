@@ -11,8 +11,8 @@ const App = () => {
       <Home />
       <Carousel />
       <Features />
-      {/* <Services /> */}
-      <div className="min-h-[200vh]"></div>
+      <Services />
+      {/* <div className="min-h-[200vh]"></div> */}
     </main>
   );
 };

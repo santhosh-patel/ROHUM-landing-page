@@ -15,14 +15,14 @@ const Navbar = () => {
     }
   });
 
-  const handleMode = () => {
-    const mode = document.querySelector("html").className;
-    if (mode == "light") {
-      document.querySelector("html").className = "dark";
-    } else {
-      document.querySelector("html").className = "light";
-    }
-  };
+  // const handleMode = () => {
+  //   const mode = document.querySelector("html").className;
+  //   if (mode == "light") {
+  //     document.querySelector("html").className = "dark";
+  //   } else {
+  //     document.querySelector("html").className = "light";
+  //   }
+  // };
 
   return (
     <motion.div
@@ -38,23 +38,23 @@ const Navbar = () => {
           </h1>
         </div>
         <div className="hidden lg:flex items-center justify-center -translate-x-[8%]">
-          <ul className="flex  gap-8 items-center text- text-gray-500 ">
-            <li className="cursor-pointer hover:text-[var(--foreground)] duration-150 ">
+          <ul className="flex  gap-8 items-center text-gray-400 ">
+            <li className="cursor-pointer hover:text-[var(--foreground)] hover:font-medium hover:scale-110 duration-150 ">
               Home
             </li>
-            <li className="cursor-pointer hover:text-[var(--foreground)] duration-150 ">
+            <li className="cursor-pointer hover:text-[var(--foreground)] hover:font-medium hover:scale-110 duration-150 ">
               About
             </li>
-            <li className="cursor-pointer hover:text-[var(--foreground)] duration-150 ">
+            <li className="cursor-pointer hover:text-[var(--foreground)] hover:font-medium hover:scale-110 duration-150 ">
               Features
             </li>
-            <li className="cursor-pointer hover:text-[var(--foreground)] duration-150 ">
+            <li className="cursor-pointer hover:text-[var(--foreground)] hover:font-medium hover:scale-110 duration-150 ">
               Services
             </li>
-            <li className="cursor-pointer hover:text-[var(--foreground)] duration-150 ">
+            <li className="cursor-pointer hover:text-[var(--foreground)] hover:font-medium hover:scale-110 duration-150 ">
               Pricing
             </li>
-            <li className="cursor-pointer hover:text-[var(--foreground)] duration-150 ">
+            <li className="cursor-pointer hover:text-[var(--foreground)] hover:font-medium hover:scale-110 duration-150 ">
               Contact
             </li>
           </ul>
@@ -63,7 +63,7 @@ const Navbar = () => {
         <div className=" md:gap-3 flex gap-2 items-center">
           <div
             className="border p-1 md:p-2 rounded-md border-gray-800 borde-[var(--purple-foreground)] text-lg lg:text-xl lg:hover:bg-gray-800 lg:hover:text-amber-300 duration-150 "
-            onClick={handleMode}
+            // onClick={handleMode}
           >
             <MdOutlineLightMode />
           </div>
