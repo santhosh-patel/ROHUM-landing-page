@@ -113,5 +113,43 @@ inherits: false;
     flex: 0 0 50%;
     min-width: 0;
     user-select: none;
+    /* min-height: 70vh; */
+    /* border-radius: 10px; */
     /* border: 1px solid blue; */
+  }
+  #slide1{
+    /* background-image:  */
+    background: rgba(0, 0, 0, 0.80) url("assets/EmotionallyIntelligentAvatar.webp");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  #slide2{
+    /* background-image:  */
+    background: rgba(0, 0, 0, 0.80) url("assets/crypto.png");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  #slide3{
+    /* background-image:  */
+    background: rgba(0, 0, 0, 0.80) url("assets/learning.jpg");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  #slide4{
+    /* background-image:  */
+    background: rgba(0, 0, 0, 0.80) url("assets/aiforbusiness.jpg");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
   }

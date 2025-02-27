@@ -93,7 +93,7 @@ const Features = () => {
       <SectionHeading smallHeading="AI FEATURES" mainHeading="Features" />
       <div
         ref={containerRef}
-        className="md:justify-center md:gap-10 lg:gap-0 lg:justify-between h-[250vh] lg:h-[300vh] cards-div w-full flex items-start relative"
+        className="md:justify-center mt-20 md:gap-10 lg:gap-0 lg:justify-between h-[250vh] lg:h-[300vh] cards-div w-full flex items-start relative"
       >
         <div
           className={`left w-[40%] relative hidden lg:flex justify-center items-center mt-10 rounded-lg md:h-[30vh] lg:h-[60vh]`}

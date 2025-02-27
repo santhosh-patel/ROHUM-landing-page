@@ -62,10 +62,11 @@ const Navbar = () => {
         {/* last section  */}
         <div className=" md:gap-3 flex gap-2 items-center">
           <div
-            className="border p-1 md:p-2 rounded-md border-gray-800 borde-[var(--purple-foreground)] text-lg lg:text-xl lg:hover:bg-gray-800 lg:hover:text-amber-300 duration-150 "
+            className="border px-4 py-2 rounded-md text-gray-400 hover:text-white border-[hsl(var(--border))] hover:border-white cursor-default  duration-150 "
             // onClick={handleMode}
           >
-            <MdOutlineLightMode />
+            {/* <MdOutlineLightMode />p */}
+            <p className="!font-mono">Demo</p>
           </div>
           <div className="border lg:hidden p-1 md:p-2 rounded-md border-gray-800 borde-[var(--purple-foreground)] text-lg">
             <MdOutlineMenu />
