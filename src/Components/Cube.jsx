@@ -22,12 +22,24 @@ const CubeModel = () => {
 export default CubeModel;
 
 const Cube = () => {
-  const videoTexture = useVideoTexture("/gitTUT.mp4");
+  const videoTexture1 = useVideoTexture("/cubeFacesVid/face1.mp4");
+  const videoTexture2 = useVideoTexture("/cubeFacesVid/face2.mp4");
+  const videoTexture3 = useVideoTexture("/cubeFacesVid/face3.mp4");
+  const videoTexture4 = useVideoTexture("/cubeFacesVid/face4.mp4");
+  const videoTexture5 = useVideoTexture("/cubeFacesVid/face4.mp4");
+  const videoTexture6 = useVideoTexture("/cubeFacesVid/face4.mp4");
 
   return (
-    <mesh>
+    <mesh
+      onPointerOver={(e) => console.log("Hovered on:", e.face.materialIndex)}
+    >
       <boxGeometry args={[3, 3, 3]} />
-      <meshStandardMaterial map={videoTexture} />
+      <meshStandardMaterial map={videoTexture1} attach="material-0" />
+      <meshStandardMaterial map={videoTexture2} attach="material-1" />
+      <meshStandardMaterial map={videoTexture3} attach="material-2" />
+      <meshStandardMaterial map={videoTexture4} attach="material-3" />
+      <meshStandardMaterial map={videoTexture5} attach="material-4" />
+      <meshStandardMaterial map={videoTexture6} attach="material-5" />
     </mesh>
   );
 };
