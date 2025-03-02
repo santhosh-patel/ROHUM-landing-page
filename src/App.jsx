@@ -10,11 +10,11 @@ const App = () => {
     <main className="text-[var(--foreground)] bg-[var(--background)] w-full min-h-screen max-w-screen-2xl border border-[hsl(var(--border))] overflow-hidden ">
       <Navbar />
       <Home />
-      <Carousel />
+      {/* <Carousel /> */}
+      <CubePage />
       <Features />
       <Services />
-      <CubePage />
-      {/* <div className="min-h-[200vh]"></div> */}
+      <div className="min-h-[200vh]"></div>
     </main>
   );
 };
