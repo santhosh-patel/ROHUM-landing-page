@@ -6,20 +6,22 @@ import * as THREE from "three";
 
 // https://chatgpt.com/c/67bfca81-fe80-8007-aba5-d585bf24df2a
 
-const CubeModel = ({ visibleFace, setVisibleFace }) => {
-  const [Ishoverd, setIshoverd] = useState(false);
+const CubeModel = ({ visibleFace, setVisibleFace, Ishoverd, setIshoverd }) => {
+  const [stopRotate, setstopRotate] = useState(false);
   return (
     <Canvas fallback={<div>Sorry no WebGL supported!</div>}>
       <ambientLight intensity={1} />
       <Environment preset="city" />
       <Cube
+        stopRotate={stopRotate}
+        setstopRotate={setstopRotate}
         Ishoverd={Ishoverd}
         setIshoverd={setIshoverd}
         setVisibleFace={setVisibleFace}
         visibleFace={visibleFace}
       />
       <OrbitControls
-        autoRotate={!Ishoverd}
+        autoRotate={!stopRotate}
         enableZoom={false}
         enablePan={false}
       />
@@ -28,7 +30,14 @@ const CubeModel = ({ visibleFace, setVisibleFace }) => {
 };
 export default CubeModel;
 
-const Cube = ({ Ishoverd, setIshoverd, setVisibleFace, visibleFace }) => {
+const Cube = ({
+  Ishoverd,
+  setIshoverd,
+  setVisibleFace,
+  visibleFace,
+  stopRotate,
+  setstopRotate,
+}) => {
   const cubeRef = useRef();
 
   // AI generated code. I dont have an idea of what's happening here. But this useFrame section here just determines which face is facing the user
@@ -73,9 +82,10 @@ const Cube = ({ Ishoverd, setIshoverd, setVisibleFace, visibleFace }) => {
     <mesh
       onPointerOver={(e) => {
         setIshoverd(true);
+        setstopRotate(true);
       }}
       ref={cubeRef}
-      onPointerLeave={() => setIshoverd(false)}
+      onPointerLeave={() => setstopRotate(false)}
     >
       <boxGeometry args={[3.5, 3.5, 3.5]} />
       <meshPhysicalMaterial
