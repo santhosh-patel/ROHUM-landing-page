@@ -26,7 +26,7 @@ const CubeInfo = ({ visibleFace, Ishoverd }) => {
   }, []);
 
   return (
-    <div className="w-full lg:w-1/2 z-10 flex justify-center items-center">
+    <div className="w-full md:w-[45%] lg:w-1/2 z-10 flex justify-center items-center">
       {Ishoverd == false ? (
         <div className="">
           <h1
