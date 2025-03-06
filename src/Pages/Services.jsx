@@ -8,7 +8,7 @@ import Autoplay from "embla-carousel-autoplay";
 
 const Services = () => {
   const [playing, setplaying] = useState(true);
-  const autoplay = Autoplay({ delay: 2500, stopOnInteraction: false }); // Create autoplay instance
+  const autoplay = Autoplay({ delay: 2000, stopOnInteraction: false }); // Create autoplay instance
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: false, startIndex: 0 },
     [autoplay]
