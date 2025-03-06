@@ -110,13 +110,22 @@ inherits: false;
     /* border: 1px solid red; */
   }
   .embla__slide {
-    flex: 0 0 50%;
+    /* flex: 0 0 50%; */
     min-width: 0;
     user-select: none;
-    /* min-height: 70vh; */
-    /* border-radius: 10px; */
-    /* border: 1px solid blue; */
   }
+
+  @media (min-width: 320px) {
+    .embla__slide {
+      flex: 0 0 90%;
+    }
+  }
+  @media (min-width: 768px) {
+    .embla__slide {
+      flex: 0 0 50%; 
+    }
+  }
+
   #slide1{
     /* background-image:  */
     background: rgba(0, 0, 0, 0.80) url("assets/EmotionallyIntelligentAvatar.webp");

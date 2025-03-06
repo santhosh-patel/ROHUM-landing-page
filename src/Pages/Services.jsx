@@ -32,16 +32,16 @@ const Services = () => {
   }, [emblaApi]);
 
   return (
-    <div className="min-h-screen lg:mt-31">
+    <div className="min-h-screen mt-20 lg:mt-32">
       <SectionHeading smallHeading="OUR SERVICES" mainHeading="Services" />
       {/* <p>hello</p> */}
-      <div className="embla p-5 mt-5" ref={emblaRef}>
+      <div className="embla md:p-5 mt-5" ref={emblaRef}>
         <div className="embla__container cursor-grab">
           {servicesInfo.length !== 0 &&
             servicesInfo.map((element, i) => (
               <div
                 key={i}
-                className="embla__slide border border-[hsl(var(--border))] flex justify-center rounded-xl mx-5 p-3 py-10"
+                className="embla__slide border border-[hsl(var(--border))] flex justify-center rounded-xl mx-5 p-1 md:p-3 py-5 md:py-10"
                 // style={{ backgroundImage:`url` }}
                 id={`slide${i + 1}`}
               >
@@ -49,7 +49,7 @@ const Services = () => {
                   <h1 className="text-3xl max-w-md mx-auto text-center font-medium">
                     {element.heading}
                   </h1>
-                  <div className="w-4/5 mx-auto">
+                  <div className="w-[95%] md:w-4/5 mx-auto">
                     <p className="text-sm mb-3 text-[var(--purple-foreground)]">
                       {element.para}
                     </p>
