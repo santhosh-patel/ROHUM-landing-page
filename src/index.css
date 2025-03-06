@@ -153,3 +153,27 @@ inherits: false;
     background-position: center;
     background-attachment: fixed;
   }
+
+  .popular-pricing{
+    position: relative;
+    overflow: hidden;
+  } 
+
+  .popular-pricing:before{
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 100%;
+    background: linear-gradient(120deg,transparent 45%,#a855f7,transparent 60% );
+    top: 0%;
+    animation: shine-animation 2s infinite linear;
+  }
+
+  @keyframes shine-animation {
+    0%{left: -150%;}
+    100%{left: 100%;}
+  }
+.most-popular-toast{
+  background: linear-gradient(120deg,#2563eb,#0891b2,#059669,#84cc16);
+
+}
