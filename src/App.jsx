@@ -6,6 +6,7 @@ import Services from "./Pages/Services";
 import Features from "./Pages/Features";
 import CubePage from "./Pages/CubePage";
 import Pricing from "./Pages/Pricing";
+import FaqsPage from "./Pages/FaqsPage";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Features />
       <Services />
       <Pricing />
+      <FaqsPage />
       <div className="min-h-[200vh]"></div>
     </main>
   );

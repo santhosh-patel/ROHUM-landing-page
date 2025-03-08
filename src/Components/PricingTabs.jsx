@@ -1,7 +1,17 @@
 import React from "react";
 import { BsCheckCircleFill } from "react-icons/bs";
 
-const PricingTabs = ({ price, plan, planPara, l1, l2, l3, l4, standout }) => {
+const PricingTabs = ({
+  price,
+  plan,
+  planPara,
+  l1,
+  l2,
+  l3,
+  l4,
+  standout,
+  free,
+}) => {
   return (
     <div
       className={`border relative lg:hover:scale-[1.03] duration-300 border-[hsl(var(--border))] w-full xl:w-[29%] lg:w-[30%] md:w-[45%] rounded-2xl py-8 xl:py-15 px-5 ${
@@ -93,7 +103,7 @@ const PricingTabs = ({ price, plan, planPara, l1, l2, l3, l4, standout }) => {
             : "bg-purple-700 text-black "
         } py-2 rounded-full`}
       >
-        Get Started
+        {free ? "Get Started" : "Buy Now"}
       </button>
       {standout && (
         <div className="most-popular-toast absolute overflow-hidden p-[2px] top-3 font-medium text-white right-3 text-sm  rounded-full ">

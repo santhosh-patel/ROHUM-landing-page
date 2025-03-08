@@ -18,6 +18,7 @@ const Pricing = () => {
           l2={"Basic analytics"}
           l3={"Access to free resources"}
           standout={false}
+          free={true}
         />
         <PricingTabs
           price={29}
@@ -28,6 +29,7 @@ const Pricing = () => {
           l3={"Personalized recommendations"}
           l4={"Priority support"}
           standout={true}
+          free={false}
         />
         <PricingTabs
           price={49}
@@ -38,6 +40,7 @@ const Pricing = () => {
           l3={"24/7 dedicated support"}
           l4={"Exclusive premium content"}
           standout={false}
+          free={false}
         />
       </div>
       {/* <p className="border ">hello</p> */}
