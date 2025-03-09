@@ -203,8 +203,9 @@ inherits: false;
   height: 100%;
 }
 
-.vertical-light{
+.semi-light{
   background: radial-gradient(circle at right ,rgba(88, 28, 135,0.8),rgba(59, 7, 100,0.5) 20%,transparent);
   height: 100%;
   width: 100%;
 }
+

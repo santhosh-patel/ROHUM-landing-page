@@ -10,7 +10,7 @@ import FaqsPage from "./Pages/FaqsPage";
 
 const App = () => {
   return (
-    <main className="text-[var(--foreground)] bg-[var(--background)] w-full min-h-screen max-w-screen-2xl border border-[hsl(var(--border))] overflow-hidden ">
+    <main className="text-[var(--foreground)] bg-[var(--background)] relative w-full min-h-screen max-w-screen-2xl border border-[hsl(var(--border))] overflow-hidden ">
       <Navbar />
       <Home />
       <Carousel />

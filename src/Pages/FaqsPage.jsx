@@ -30,7 +30,7 @@ const FaqsPage = () => {
 
       <div className="gap-3 relative grid-cols-10 px-1 lg:px-2 grid-rows-4 grid mt-20 w-full mx-auto">
         {/* light beam */}
-        <div className="vertical-light absolute"></div>
+        <div className="semi-light absolute"></div>
         {/* light beam */}
 
         <div

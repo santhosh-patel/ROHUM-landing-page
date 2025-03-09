@@ -7,11 +7,8 @@ import Lottie from "lottie-react";
 const Home = () => {
   return (
     <div className="min-h-screen relative overflow-hidden ">
-      <div className="relative h-screen w-full flex justify-center items-center">
-        {/* <div className="absolute bottom-0 -left-2 right-0 top-0 bg-[linear-gradient(to_right,#581c87_1px,transparent_1px),linear-gradient(to_bottom,#581c87_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div> */}
-
+      <div className="relative h-screen flex justify-center items-center">
         <div className="absolute bottom-0 dark:[mask-image:radial-gradient(50%_30%_at_50%_30%,black,transparent)] left-0 dark:bg-[#581c87] right-0 top-0 md:dark:[mask-image:radial-gradient(30%_40%_at_50%_35%,black,transparent)] "></div>
-
         <div className="z-10 w-full mb-[20vh] md:mb-[10vh] lg:mb-0 lg:mt-24 md:w-3/4 lg:w-2/3 ">
           <h1 className="text-4xl md:text-6xl xl:text-8xl text-center font-bold bg-gradient-to-r from-purple-700 via-blue-300 to-orange-400 text-transparent bg-clip-text animate-gradient pb-3">
             World's First AI <br /> Avatar Agent
