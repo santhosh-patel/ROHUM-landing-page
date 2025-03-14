@@ -13,12 +13,12 @@ const App = () => {
   return (
     <main className="text-[var(--foreground)] bg-[var(--background)] relative w-full min-h-screen max-w-screen-2xl border border-[hsl(var(--border))] overflow-hidden ">
       <Navbar />
-      <Home />
+      {/* <Home /> */}
       {/* <Carousel /> */}
-      <CubePage />
+      {/* <CubePage /> */}
       <Features />
-      <Services />
-      <Cta />
+      {/* <Services /> */}
+      {/* <Cta /> */}
       <Pricing />
       <FaqsPage />
       <div className="min-h-[200vh]"></div>

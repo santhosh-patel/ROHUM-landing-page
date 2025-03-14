@@ -5,7 +5,7 @@ const Cta = () => {
   return (
     <div className="min-h-screen lg:h-[150vh] relative flex justify-center items-center pt-12 overflow-hidden">
       <Circles />
-      <div className="fade-gradient absolute h-full w-full "></div>
+      <div className="fade-gradient top-0 left-0 absolute h-full w-full "></div>
       <div className="z-20">
         <h1 className="metalic-text text-4xl text-[var(--purple-foreground)] md:text-6xl xl:text-7xl pb-2 font-semibold text-center">
           Bring Your AI Avatar

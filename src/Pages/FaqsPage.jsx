@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SectionHeading from "../Components/SectionHeading";
 import { AnimatePresence, motion } from "framer-motion";
+import FaqsSmall from "../Components/FaqsSmall";
 
 const FaqsPage = () => {
   const [IshHovered, setIshHovered] = useState([
@@ -28,10 +29,8 @@ const FaqsPage = () => {
     <div className="mt-20 min-h-screen">
       <SectionHeading smallHeading="FAQS" mainHeading="Have a Question?" />
 
-      <div className="gap-3 relative grid-cols-10 px-1 lg:px-2 grid-rows-4 grid mt-20 w-full mx-auto">
-        {/* light beam */}
+      <div className="hidden md:grid gap-3 relative grid-cols-10 px-1 lg:px-2 grid-rows-4 mt-20 w-full mx-auto">
         <div className="semi-light absolute"></div>
-        {/* light beam */}
 
         <div
           className="faqs-card col-span-3 shadow-lg row-span-15 flex flex-col rounded-lg z-20 justify-center md:p-1 lg:p-5 overflow-hidden items-center cursor-default"
@@ -530,6 +529,7 @@ const FaqsPage = () => {
           </AnimatePresence>
         </div>
       </div>
+      <FaqsSmall IshHovered={IshHovered} setIshHovered={setIshHovered} />
     </div>
   );
 };
