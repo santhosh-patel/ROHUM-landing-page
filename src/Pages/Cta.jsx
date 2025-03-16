@@ -14,7 +14,7 @@ const Cta = () => {
           to Life!{" "}
         </h1>
         <div className="flex justify-center mt-5">
-          <button className="border font-semibold bg-gradient-to-r from-purple-700 via-blue-300 to-orange-400 text-transparent bg-clip-text animate-gradient p-4 border-white/70 hover:-translate-y-2 duration-300 active:scale-90 text-lg rounded-full px-8 bg-transparent backdrop-blur-[2px]">
+          <button className="border font-semibold bg-gradient-to-r from-purple-700 via-blue-300 to-orange-400 text-transparent bg-clip-text animate-gradient p-4 border-white/70 hover:-translate-y-2 duration-300 active:scale-90 text-lg rounded-full px-8 bg-black backdrop-blur-[2px]">
             Get Started Now
           </button>
         </div>

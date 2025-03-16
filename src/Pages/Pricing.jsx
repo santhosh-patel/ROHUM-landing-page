@@ -8,6 +8,7 @@ const Pricing = () => {
       <SectionHeading
         smallHeading="PRICING & PLANS"
         mainHeading="Invest in Your Success"
+        id={"pricId"}
       />
       <div className="mt-10 lg:mt-28 justify-center md:justify-evenly xl:justify-center gap-16 lg:gap-0 xl:gap-8 flex flex-col md:flex-wrap md:flex-row p-2 lg:p-0 xl:p-2 ">
         <PricingTabs

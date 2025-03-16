@@ -240,7 +240,7 @@ const FaqsPage = () => {
         </div>
 
         <div
-          className="faqs-card col-span-4 row-span-35 flex  rounded-lg z-20 justify-center md:p-1 lg:p-3 overflow-hidden items-center cursor-default"
+          className="faqs-card col-span-4 row-span-35 flex flex-col rounded-lg z-20 justify-center md:p-1 lg:p-3 overflow-hidden items-center cursor-default"
           onMouseEnter={() => {
             setIshHovered((prev) =>
               prev.map((item, index) => (index === 6 ? true : item))
@@ -420,42 +420,9 @@ const FaqsPage = () => {
             )}
           </AnimatePresence>
         </div>
+
         <div
           className="faqs-card col-span-7 row-span-15  flex flex-col rounded-lg z-20 justify-center md:p-1 lg:p-3 overflow-hidden items-center cursor-default"
-          onMouseEnter={() => {
-            setIshHovered((prev) =>
-              prev.map((item, index) => (index === 11 ? true : item))
-            );
-          }}
-          onMouseLeave={() => {
-            setIshHovered((prev) =>
-              prev.map((item, index) => (index === 11 ? false : item))
-            );
-          }}
-        >
-          <h2 className="text-center text-lg text-white font-semibold">
-            How will you prove user retention and long-term value?
-          </h2>{" "}
-          <AnimatePresence>
-            {IshHovered[11] && (
-              <motion.p
-                className="text-sm mt-5 text-gray-500"
-                variants={variants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-              >
-                Dynamic content updates: Seasonal updates and programs. <br />
-                Gamification: Rewards for achieving emotional well-being goals.{" "}
-                <br />
-                Social features: Shared avatar experiences in VR spaces.
-              </motion.p>
-            )}
-          </AnimatePresence>
-        </div>
-        <div
-          className="faqs-card col-span-3 row-span-30  flex flex-col rounded-lg z-20 justify-center md:p-1 lg:p-3 overflow-hidden items-center cursor-default"
           onMouseEnter={() => {
             setIshHovered((prev) =>
               prev.map((item, index) => (index === 12 ? true : item))
@@ -492,23 +459,23 @@ const FaqsPage = () => {
           </AnimatePresence>
         </div>
         <div
-          className="faqs-card col-span-7 row-span-15  flex  rounded-lg z-20 justify-center md:p-1 lg:p-3 overflow-hidden items-center cursor-default"
+          className="faqs-card col-span-3 row-span-15 flex flex-col rounded-lg z-20 justify-center md:p-1 lg:p-3 overflow-hidden items-center cursor-default"
           onMouseEnter={() => {
             setIshHovered((prev) =>
-              prev.map((item, index) => (index === 13 ? true : item))
+              prev.map((item, index) => (index === 11 ? true : item))
             );
           }}
           onMouseLeave={() => {
             setIshHovered((prev) =>
-              prev.map((item, index) => (index === 13 ? false : item))
+              prev.map((item, index) => (index === 11 ? false : item))
             );
           }}
         >
           <h2 className="text-center text-lg text-white font-semibold">
-            What makes ROHUM.tech's avatars emotionally intelligent?
+            How will you prove user retention and long-term value?
           </h2>{" "}
           <AnimatePresence>
-            {IshHovered[5] && (
+            {IshHovered[11] && (
               <motion.p
                 className="text-sm mt-5 text-gray-500"
                 variants={variants}
@@ -517,13 +484,10 @@ const FaqsPage = () => {
                 exit="exit"
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
-                Unlike traditional assistants focused on transactional tasks,
-                our avatar combines emotional intelligence with multimodal
-                interaction (voice, text, facial expressions). It adapts
-                dynamically to users’ emotional states, remembers personal
-                preferences, and acts as a proactive companion for mental
-                wellness, productivity, and social connection—not just task
-                execution.
+                Dynamic content updates: Seasonal updates and programs. <br />
+                Gamification: Rewards for achieving emotional well-being goals.{" "}
+                <br />
+                Social features: Shared avatar experiences in VR spaces.
               </motion.p>
             )}
           </AnimatePresence>

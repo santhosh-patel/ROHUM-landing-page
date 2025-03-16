@@ -90,7 +90,11 @@ const Features = () => {
 
   return (
     <div className="min-h-screen scroll-div mt-20 p-5">
-      <SectionHeading smallHeading="AI FEATURES" mainHeading="Features" />
+      <SectionHeading
+        id={"featId"}
+        smallHeading="AI FEATURES"
+        mainHeading="Features"
+      />
       <div
         ref={containerRef}
         className="md:justify-center mt-20 md:gap-10 lg:gap-0 lg:justify-between h-[250vh] lg:h-[300vh] cards-div w-full flex items-start relative"

@@ -33,7 +33,11 @@ const Services = () => {
 
   return (
     <div className="min-h-screen mt-20 lg:mt-32">
-      <SectionHeading smallHeading="OUR SERVICES" mainHeading="Services" />
+      <SectionHeading
+        id={"serId"}
+        smallHeading="OUR SERVICES"
+        mainHeading="Services"
+      />
       {/* <p>hello</p> */}
       <div className="embla md:p-5 mt-5" ref={emblaRef}>
         <div className="embla__container cursor-grab">

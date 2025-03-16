@@ -64,7 +64,7 @@ const PricingTabs = ({
         </h2>
         <div
           className={`text-xl border-[1.5px] p-1 rounded-md ${
-            standout ? "border-black" : "border-white/80"
+            standout ? "border-purple-500" : "border-purple-950"
           }`}
           onMouseEnter={() => {
             setIsHovered(true);
