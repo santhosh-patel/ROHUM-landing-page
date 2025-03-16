@@ -17,6 +17,7 @@
     "@types/three": "^0.173.0",
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
+    "esbuild": "^0.25.1",
     "framer-motion": "^12.4.7",
     "lottie-react": "^2.4.1",
     "react": "^19.0.0",
