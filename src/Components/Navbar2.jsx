@@ -18,10 +18,12 @@ const Navbar2 = () => {
         <div className="size-13 ">
           <img src={rohum_logo} alt="Rohum logo" />
         </div>
-        <h2 className="text-2xl saiba-font">Rohum</h2>
+        <h2 className="text-2xl saiba-font [text-shadow:3px_3px_purple]">
+          Rohum
+        </h2>
       </div>
       {/* <div className="border"> */}
-      <ul className="flex items-center bg-white/5 absolute top-[50%] -translate-y-1/2 -translate-x-1/2 left-[50%]  text-sm gap-5 rounded-full py-3 px-5 border-purple-950 border">
+      <ul className="flex items-center bg-white/5 absolute top-[50%] -translate-y-1/2 -translate-x-1/2 left-[50%]  text-sm gap-5 rounded-full py-3 px-5 border-white/40 border">
         <li
           className="cursor-pointer hover:text-white/70 hover:scale-90 duration-150 "
           onClick={() => {

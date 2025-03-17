@@ -59,26 +59,25 @@ const Pricing = () => {
           custom={true}
         /> */}
       </div>
-      <div className="min-h-[20vh] flex flex-col gap-5 md:gap-0 md:flex-row justify-between p-6 lg:p-10 xl:p-15 w-[95%] rounded-xl bg-[var(--purple-foreground)] mt-6 lg:mt-10 mx-auto items-center">
-        <div className="w-full md:w-3/4">
-          <h1 className="text-4xl lg:text-5xl font-bold mb-5 text-black">
-            Explore Our <br /> Enterprise Plan
-          </h1>
-          <p className="text-gray-300 text-xs md:text-sm lg:text-base">
-            Unlock the full potential of your business with our Enterprise Plan.
-            Designed to meet the needs of large teams and complex projects, this
-            plan offers advanced features, enhanced security, and dedicated
-            support to ensure seamless operations.
-          </p>
+      <div className="min-h-[20vh] w-[95%] border-glow-animation-white overflow-hidden p-1 rounded-xl mt-6 lg:mt-10 mx-auto ">
+        <div className="flex flex-col p-6 lg:p-10 xl:p-15 rounded-xl gap-5 md:gap-0 md:flex-row justify-between items-center bg-[var(--purple-foreground)]">
+          <div className="w-full md:w-3/4">
+            <h1 className="text-4xl lg:text-5xl font-bold mb-5 text-black">
+              Explore Our <br /> Enterprise Plan
+            </h1>
+            <p className="text-gray-300 text-xs md:text-sm lg:text-base">
+              Unlock the full potential of your business with our Enterprise
+              Plan. Designed to meet the needs of large teams and complex
+              projects, this plan offers advanced features, enhanced security,
+              and dedicated support to ensure seamless operations.
+            </p>
+          </div>
+          <a href="https://forms.fillout.com/t/2EfpPyfd91us" target="_blank">
+            <button className="bg-white hover:bg-white/80 duration-150 text-[var(--purple-foreground)] p-3 rounded-full px-4 font-semibold">
+              Contact Us {">"}
+            </button>
+          </a>
         </div>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSdyezWwvzBYHhsOJeveaMJ1795_APqXHU2vO93TZMsqT-1XTQ/viewform"
-          target="_blank"
-        >
-          <button className="bg-white hover:bg-white/80 duration-150 text-[var(--purple-foreground)] p-3 rounded-full px-4 font-semibold">
-            Contact Us {">"}
-          </button>
-        </a>
       </div>
     </div>
   );

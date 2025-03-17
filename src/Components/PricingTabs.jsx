@@ -63,7 +63,7 @@ const PricingTabs = ({
           {plan}
         </h2>
         <div
-          className={`text-xl border-[1.5px] p-1 rounded-md ${
+          className={`text-xl border-[1.5px] p-1 rounded-full ${
             standout ? "border-purple-500" : "border-purple-950"
           }`}
           onMouseEnter={() => {
