@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
 import Carousel from "./Components/Carousel";
@@ -10,20 +10,39 @@ import FaqsPage from "./Pages/FaqsPage";
 import Cta from "./Pages/Cta";
 import Footer from "./Components/Footer";
 import Navbar2 from "./Components/Navbar2";
+import { Routes, Route } from "react-router-dom";
+import MoreServices from "./Pages/MoreServices";
+import ComingSoon from "./Pages/ComingSoon";
 
 const App = () => {
+  const [serviceIndex, setserviceIndex] = useState(0);
   return (
     <main className="text-[var(--foreground)] bg-[var(--background)] relative w-full min-h-screen max-w-screen-2xl border border-[hsl(var(--border))] overflow-hidden ">
       {/* <Navbar /> */}
       <Navbar2 />
-      <Home />
-      {/* <Carousel /> */}
-      <CubePage />
-      <Features />
-      <Services />
-      <Cta />
-      <Pricing />
-      <FaqsPage />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Home />
+              {/* <Carousel /> */}
+              <CubePage />
+              <Features />
+              <Services setserviceIndex={setserviceIndex} />
+              <Cta />
+              <Pricing />
+              <FaqsPage />
+            </>
+          }
+        />
+        <Route
+          path="/services/:id"
+          element={<MoreServices serviceIndex={serviceIndex} />}
+        />
+        <Route path="/download" element={<ComingSoon />} />
+        <Route path="*" element={<>404</>} />
+      </Routes>
       <Footer />
     </main>
   );

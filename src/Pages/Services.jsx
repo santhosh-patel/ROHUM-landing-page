@@ -5,8 +5,9 @@ import SectionHeading from "../Components/SectionHeading";
 import useEmblaCarousel from "embla-carousel-react";
 import { servicesInfo } from "../info/servicesinfo";
 import Autoplay from "embla-carousel-autoplay";
+import { Link } from "react-router-dom";
 
-const Services = () => {
+const Services = ({ setserviceIndex }) => {
   const [playing, setplaying] = useState(true);
   const autoplay = Autoplay({ delay: 2000, stopOnInteraction: false }); // Create autoplay instance
   const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -73,9 +74,13 @@ const Services = () => {
                         ))}
                     </ul>
                     <div className="flex justify-center mt-5">
-                      <button className="border border-[var(--purple-foreground)] rounded-md py-2 px-3 cursor-pointer text-gray-400 hover:text-[var(--purple-foreground)] duration-150 hover:font-bold ">
+                      <Link
+                        to={`/services/${i}`}
+                        className="border border-[var(--purple-foreground)] rounded-md py-2 px-3 cursor-pointer text-gray-400 hover:text-[var(--purple-foreground)] duration-150 hover:font-bold "
+                        onClick={() => setserviceIndex(i)}
+                      >
                         Read more
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>

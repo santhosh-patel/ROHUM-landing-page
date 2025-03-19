@@ -77,7 +77,7 @@ const Pricing = () => {
             href="https://forms.fillout.com/t/2EfpPyfd91us"
             target="_blank"
           >
-            <button className="bg-white hover:bg-black duration-150 text-[var(--purple-foreground)] p-3 rounded-full px-4 font-semibold">
+            <button className="bg-white hover:bg-black duration-300 text-[var(--purple-foreground)] p-3 rounded-full px-4 font-semibold">
               Contact Us {">"}
             </button>
           </a>

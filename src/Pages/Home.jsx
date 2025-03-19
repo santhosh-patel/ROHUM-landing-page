@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import award from "../assets/awardpng.png";
 // import chipSvg from "../assets/chip.png";
+import { Link } from "react-router-dom";
 // import brainSvg from "../assets/brain.png";
 import bot from "../assets/bot.json";
 import Lottie from "lottie-react";
 
 const Home = () => {
+  let pric = null;
+  useEffect(() => {
+    pric = document.body.querySelector("#pricId");
+  }, []);
   return (
     <div className="min-h-screen relative overflow-hidden ">
       <div className="relative h-screen flex justify-center items-center">
@@ -33,10 +38,25 @@ const Home = () => {
               <span className="text-[var(--purple-foreground)]">AI Agents</span>
             </p>
             <div className="mt-3 lg:mt-5 gap-3 flex justify-center lg:gap-7">
-              <button className="text-[var(--background)] text-xs lg:text-base font-bold px-2 py-2 lg:py-3 lg:px-5 bg-[var(--purple-foreground)] rounded-md hover:bg-purple-800 duration-150 ">
+              <Link
+                to={"/download"}
+                className="text-[var(--background)] text-xs lg:text-base font-bold px-2 py-2 lg:py-3 lg:px-5 bg-[var(--purple-foreground)] rounded-md hover:bg-purple-800 duration-150 "
+              >
                 Get Started
-              </button>
-              <button className="border px-2 py-2 lg:py-3 text-xs lg:text-base lg:px-5 hover:bg-purple-950 bg-transparent backdrop-blur-md duration-150 rounded-md  border-[var(--purple-foreground)]">
+              </Link>
+              <button
+                className="border px-2 py-2 lg:py-3 text-xs lg:text-base lg:px-5 hover:bg-purple-950 bg-transparent backdrop-blur-md duration-150 rounded-md  border-[var(--purple-foreground)]"
+                onClick={() => {
+                  if (pric) {
+                    const topPos =
+                      pric.getBoundingClientRect().top + window.scrollY - 100;
+                    window.scrollTo({
+                      top: topPos,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+              >
                 See plans & pricing
               </button>
             </div>
