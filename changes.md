@@ -1,6 +1,6 @@
-- make the moving sensitivty low for the three cube
 - fix the mapping of faces and text
-<!-- - add the same design to the logo text as footer -->
+  <!-- - make the moving sensitivty low for the three cube -->
+  <!-- - add the same design to the logo text as footer -->
 - add cool diagrams to the left floating div
 - make partners section
 - COMPLETE CONTACT SECTION
@@ -14,3 +14,4 @@
 - more features page
 - remove water mark
 - change font style for section heading to saiba-45
+- MAKE THE NAVBAR RESPONSIVE FOR SMALLER DEVICES

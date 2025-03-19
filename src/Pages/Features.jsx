@@ -162,7 +162,7 @@ const Features = () => {
           {/* card1 */}
           <div className="card bg-transparent h-[30%] flex gap-5 w-full justify-start items-center rounded-lg shadow-lg transform transition-all">
             <div className="max-w-lg pl-5 md:pl-0 ">
-              <h3 className="text-3xl text-start lg:text-4xl font-bold mb-7">
+              <h3 className="purple-fade-text text-3xl text-start lg:text-4xl font-bold mb-7">
                 Realistic AI Avatars
               </h3>
               <p className="text-gray-600 text-start text-xs md:text-sm mb-3 dark:text-gray-400">
@@ -195,7 +195,7 @@ const Features = () => {
           {/* card12*/}
           <div className="card bg-transparent h-[30%] flex gap-5 w-full justify-start items-center rounded-lg shadow-lg transform transition-all">
             <div className="max-w-lg pl-5 md:pl-0 ">
-              <h3 className="text-3xl text-start lg:text-4xl font-bold mb-7">
+              <h3 className="purple-fade-text text-3xl text-start lg:text-4xl font-bold mb-7">
                 Crypto Simplified
               </h3>
               <p className="text-gray-600 text-start text-xs md:text-sm mb-3 dark:text-gray-400">
@@ -228,7 +228,7 @@ const Features = () => {
           {/* card3 */}
           <div className="card bg-transparent h-[30%] flex gap-5 w-full justify-start items-center rounded-lg shadow-lg transform transition-all">
             <div className="max-w-lg pl-5 md:pl-0 ">
-              <h3 className="text-3xl text-start lg:text-4xl font-bold mb-7">
+              <h3 className="purple-fade-text text-3xl text-start lg:text-4xl font-bold mb-7">
                 AI Business Assistance
               </h3>
               <p className="text-gray-600 text-start text-xs md:text-sm mb-3 dark:text-gray-400">
@@ -262,8 +262,8 @@ const Features = () => {
           {/* card4 */}
           <div className="card bg-transparent h-[30%] flex gap-5 w-full justify-start items-center rounded-lg shadow-lg transform transition-all">
             <div className="max-w-lg pl-5 md:pl-0 ">
-              <h3 className="text-3xl text-start lg:text-4xl font-bold mb-7">
-                Interactive Learning & Training{" "}
+              <h3 className="purple-fade-text text-3xl text-start lg:text-4xl font-bold mb-7">
+                Interactive Training{" "}
               </h3>
               <p className="text-gray-600 text-start text-xs md:text-sm mb-3 dark:text-gray-400">
                 Interactive Learning & Training uses AI avatars to provide

@@ -1,4 +1,5 @@
 import React from "react";
+import award from "../assets/awardpng.png";
 // import chipSvg from "../assets/chip.png";
 // import brainSvg from "../assets/brain.png";
 import bot from "../assets/bot.json";
@@ -46,13 +47,13 @@ const Home = () => {
         </div> */}
         <div className="absolute md:size-[50vh] lg:size-52 xl:size-56 bottom-0 lg:left-2 lg:bottom-5">
           <Lottie animationData={bot} loop={true} />
-          <p className="hidden lg:block animate-scale absolute z-20 top-0  dark:bg-blue-700 right-0 py-2 px-3 rounded-lg rounded-bl-none text-[#f9fafb] translate-x-[30%] -translate-y-[10%] ">
+          {/* <p className="hidden lg:block animate-scale absolute z-20 top-0  dark:bg-blue-700 right-0 py-2 px-3 rounded-lg rounded-bl-none text-[#f9fafb] translate-x-[30%] -translate-y-[10%] ">
             Welcome
-          </p>
+          </p> */}
+          <div className="hidden animate-scale bg-blue-300 lg:block absolute z-20 top-0 right-0 py-2 px-3 rounded-lg rounded-bl-none text-[#f9fafb] translate-x-[50%] -translate-y-[40%]">
+            <img className="h-10" src={award} alt="#8 award in AI chatbot" />
+          </div>
         </div>
-        {/* <div className="animate-scale lg:size-28 absolute right-5 top-20 ">
-          <img src={brainSvg} alt="chip-svg" />
-        </div> */}
       </div>
     </div>
   );

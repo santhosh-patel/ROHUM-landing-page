@@ -24,6 +24,7 @@ const CubeModel = ({ visibleFace, setVisibleFace, Ishoverd, setIshoverd }) => {
         autoRotate={!stopRotate}
         enableZoom={false}
         enablePan={false}
+        rotateSpeed={0.5}
       />
     </Canvas>
   );
