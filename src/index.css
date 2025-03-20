@@ -265,7 +265,7 @@ inherits: false;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border-radius: 8px;
-  display: block;
+  /* display: block; */
   position: relative;
   width: -moz-max-content;
   width: max-content;
