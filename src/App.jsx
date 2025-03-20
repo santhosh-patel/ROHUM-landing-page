@@ -14,6 +14,7 @@ import { Routes, Route } from "react-router-dom";
 import MoreServices from "./Pages/MoreServices";
 import ComingSoon from "./Pages/ComingSoon";
 import Terms from "./Pages/Terms";
+import Policy from "./Pages/Policy";
 
 const App = () => {
   const [serviceIndex, setserviceIndex] = useState(0);
@@ -42,6 +43,7 @@ const App = () => {
           element={<MoreServices serviceIndex={serviceIndex} />}
         />
         <Route path="/download" element={<ComingSoon />} />
+        <Route path="/policy" element={<Policy />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<>404</>} />
       </Routes>

@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Terms = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, []);
+
   return (
     <div className="min-h-screen mt-22 lg:p-5">
       <h1 className="font-semibold text-[var(--purple-foreground)] text-4xl text-center max-w-2xl mx-auto md:text-5xl">
         Terms & condition
       </h1>
+      <p className="text-center text-sm mt-2 !font-mono font-bold">
+        Effective Date: March 16, 2025
+      </p>
       <div className="my-5 px-2 md:px-5">
         <div className="mb-5">
           <h3 className="text-3xl">Introduction</h3>
