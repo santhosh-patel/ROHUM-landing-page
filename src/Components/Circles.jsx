@@ -24,7 +24,7 @@ const Circles = () => {
       {circleRadii.map((radius, i) => (
         <div
           key={i}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-[1.5px] border-dashed border-zinc-700 rounded-full"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border-[1.5px] border-zinc-800 rounded-full"
           style={{ width: `${radius * 2}vh`, height: `${radius * 2}vh` }}
         ></div>
       ))}

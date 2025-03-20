@@ -11,7 +11,7 @@ const Navbar2 = () => {
   let feat = null;
   let ser = null;
   let pric = null;
-  // let cont = null;
+  let cont = null;
   useEffect(() => {
     setnavbarHeight(document.querySelector("#navbar").clientHeight);
     console.log("updated");
@@ -95,7 +95,21 @@ const Navbar2 = () => {
           >
             Pricing
           </li>
-          <li className="cursor-pointer hover:text-white/70 hover:scale-90 duration-150 ">
+          <li
+            className="cursor-pointer hover:text-white/70 hover:scale-90 duration-150 "
+            onClick={() => {
+              cont = document.body.querySelector("#contId");
+
+              if (cont) {
+                const topPos =
+                  cont.getBoundingClientRect().top + window.scrollY - 100;
+                window.scrollTo({
+                  top: topPos,
+                  behavior: "smooth",
+                });
+              }
+            }}
+          >
             Contact
           </li>
         </ul>

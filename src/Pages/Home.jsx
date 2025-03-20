@@ -70,7 +70,10 @@ const Home = () => {
           {/* <p className="hidden lg:block animate-scale absolute z-20 top-0  dark:bg-blue-700 right-0 py-2 px-3 rounded-lg rounded-bl-none text-[#f9fafb] translate-x-[30%] -translate-y-[10%] ">
             Welcome
           </p> */}
-          <div className="hidden animate-scale bg-blue-300 lg:block absolute z-20 top-0 right-0 py-2 px-3 rounded-lg rounded-bl-none text-[#f9fafb] translate-x-[50%] -translate-y-[40%]">
+          <div
+            className="hidden animate-scale lg:block absolute z-20 top-0 right-0 py-2 px-3 rounded-lg rounded-bl-none text-[#f9fafb] translate-x-[50%] -translate-y-[40%] bg-white/95 "
+            // style={{background:"rgba(255,255,255,0.)"}}
+          >
             <img className="h-10" src={award} alt="#8 award in AI chatbot" />
           </div>
         </div>

@@ -15,6 +15,7 @@ import MoreServices from "./Pages/MoreServices";
 import ComingSoon from "./Pages/ComingSoon";
 import Terms from "./Pages/Terms";
 import Policy from "./Pages/Policy";
+import Contact from "./Pages/Contact";
 
 const App = () => {
   const [serviceIndex, setserviceIndex] = useState(0);
@@ -34,6 +35,7 @@ const App = () => {
               <Services setserviceIndex={setserviceIndex} />
               <Cta />
               <Pricing />
+              <Contact />
               <FaqsPage />
             </>
           }

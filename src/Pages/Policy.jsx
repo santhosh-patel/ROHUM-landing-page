@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 const Policy = () => {
   useEffect(() => {
-    // window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0 });
   }, []);
 
   return (
