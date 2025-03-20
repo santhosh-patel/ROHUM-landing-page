@@ -3,6 +3,7 @@ import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { FaLocationDot, FaPhone, FaXTwitter } from "react-icons/fa6";
 // import { CiMail } from "react-icons/ci";
 import { IoMail } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import logo from "../assets/rohum_logo.png";
 
 const Footer = () => {
@@ -127,14 +128,20 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline underline-offset-4">
+                  <Link
+                    to={"/policy"}
+                    className="hover:underline underline-offset-4"
+                  >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline underline-offset-4">
+                  <Link
+                    to={"/terms"}
+                    className="hover:underline underline-offset-4"
+                  >
                     Terms &amp; Conditions
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

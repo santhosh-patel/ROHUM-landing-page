@@ -13,6 +13,7 @@ import Navbar2 from "./Components/Navbar2";
 import { Routes, Route } from "react-router-dom";
 import MoreServices from "./Pages/MoreServices";
 import ComingSoon from "./Pages/ComingSoon";
+import Terms from "./Pages/Terms";
 
 const App = () => {
   const [serviceIndex, setserviceIndex] = useState(0);
@@ -41,6 +42,7 @@ const App = () => {
           element={<MoreServices serviceIndex={serviceIndex} />}
         />
         <Route path="/download" element={<ComingSoon />} />
+        <Route path="/terms" element={<Terms />} />
         <Route path="*" element={<>404</>} />
       </Routes>
       <Footer />

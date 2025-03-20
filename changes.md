@@ -12,5 +12,5 @@
   <!-- - map get started to downloading page. For now comming soon page -->
   <!-- - map see plans button to plans section -->
 - add privacy policy page
-<!-- - change font style for section heading to saiba-45 -->
-- MAKE THE NAVBAR RESPONSIVE FOR SMALLER DEVICES
+  <!-- - change font style for section heading to saiba-45 -->
+  <!-- - MAKE THE NAVBAR RESPONSIVE FOR SMALLER DEVICES -->
