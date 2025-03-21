@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="bg-black mt-24">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
-          <div className="mb-6 pl-5 md:mb-0">
+          <div className="mb-6 lg:pl-5 md:mb-0">
             <a href="" className="flex items-center mb-8">
               {/* <img src={logo} className="h-9 me-3" alt="Rohum Logo" /> */}
               <span className=" text-4xl saiba-font [text-shadow:3px_3px_purple]">
