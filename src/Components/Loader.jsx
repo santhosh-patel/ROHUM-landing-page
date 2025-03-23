@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import rohum_logo from "../assets/Rohum_logo.png";
+import gsap from "gsap";
 import { motion } from "framer-motion";
+import { useGSAP } from "@gsap/react";
 
 const Loader = () => {
+  const paraRef = useRef(null);
+
+  useGSAP(() => {
+    gsap.from(paraRef?.current?.children, {
+      opacity: 0,
+      duration: 1,
+      stagger: 0.03,
+      yoyo: true,
+      yoyoEase: "none",
+      repeat: -1,
+    });
+  }, []);
   return (
     <motion.div
       key="modal"
@@ -12,14 +26,20 @@ const Loader = () => {
       transition={{ duration: 1 }}
       className="bg-black flex justify-center items-center fixed z-40 top-0 left-0 h-screen w-screen"
     >
-      <h2 className="text-3xl absolute top-5 left-5 saiba-font [text-shadow:3px_3px_purple]">
-        Rohum
-      </h2>
-      <motion.div
-        exit={{ scale: 0 }}
-        className="loader border rounded-full p-3 border-purple-950 "
-      >
-        <img src={rohum_logo} alt="logo" className="size-15" />
+      <motion.div exit={{ opacity: 0 }}>
+        {/* <img src={rohum_logo} alt="logo" className="size-15" /> */}
+        <h2 className="text-3xl text-center font-bold">
+          Rohum<span className="text-5xl text-purple-800">.</span>
+        </h2>
+        <p
+          id="loading-para"
+          ref={paraRef}
+          className="text-center text-white/80 text-sm"
+        >
+          {"Loading the experience".split("").map((el, i) => (
+            <span key={i}>{el}</span>
+          ))}
+        </p>
       </motion.div>
     </motion.div>
   );

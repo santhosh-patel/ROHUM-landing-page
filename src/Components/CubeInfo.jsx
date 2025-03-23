@@ -4,11 +4,9 @@ import { useGSAP } from "@gsap/react";
 import ai_info from "../info/rohum_ai_info.js";
 import { AnimatePresence, motion } from "framer-motion";
 
-gsap.registerPlugin(useGSAP);
 const variants = {
   initial: { opacity: 0, scale: 0 },
   animate: { opacity: 1, scale: 1 },
-  // exit: { opacity: 0, scale: 0 },
 };
 
 const CubeInfo = ({ visibleFace, Ishoverd }) => {

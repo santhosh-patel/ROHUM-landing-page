@@ -15,21 +15,23 @@ import Terms from "./Pages/Terms";
 import Policy from "./Pages/Policy";
 import Contact from "./Components/sections/Contact";
 import CheckLoaded from "./Components/CheckLoaded";
+import gsap from "gsap";
 
 const App = () => {
   const [serviceIndex, setserviceIndex] = useState(0);
+  const timeline1 = gsap.timeline();
 
   return (
     <main className="text-[var(--foreground)] bg-[var(--background)] relative w-full min-h-screen max-w-screen-2xl border border-[hsl(var(--border))] overflow-hidden">
       {/* <Navbar /> */}
-      <Navbar2 />
+      <Navbar2 timeline1={timeline1} />
       <Routes>
         <Route element={<CheckLoaded />}>
           <Route
             path="/"
             element={
               <>
-                <Home />
+                <Home timeline1={timeline1} />
                 <CubePage />
                 <Features />
                 <Services setserviceIndex={setserviceIndex} />

@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext, useRef } from "react";
 import rohum_logo from "../assets/Rohum_logo.png";
 import { useNavigate } from "react-router-dom";
 import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import LoadContext from "../context/LoadingProvider";
 
-const Navbar2 = () => {
+const Navbar2 = ({ timeline1 }) => {
   const [ToggleMenu, setToggleMenu] = useState(false);
   const [navbarHeight, setnavbarHeight] = useState();
   const navigate = useNavigate();
@@ -13,6 +16,21 @@ const Navbar2 = () => {
   let ser = null;
   let pric = null;
   let cont = null;
+
+  const navRef = useRef();
+  const { isLoading } = useContext(LoadContext);
+
+  useGSAP(() => {
+    if (isLoading === false) {
+      timeline1.from(navRef?.current?.children, {
+        opacity: 0,
+        stagger: 0.3,
+        y: -10,
+        duration: 0.5,
+      });
+    }
+  }, [isLoading]);
+
   useEffect(() => {
     setnavbarHeight(document.querySelector("#navbar").clientHeight);
     console.log("updated");
@@ -21,6 +39,7 @@ const Navbar2 = () => {
   return (
     <>
       <div
+        ref={navRef}
         id="navbar"
         className="w-full flex bg-transparent px-4 py-4 justify-between z-40 fixed overflow-hidden top-0 backdrop-blur-md"
       >

@@ -1,19 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useContext } from "react";
 import award from "../../assets/awardpng.png";
 // import chipSvg from "../assets/chip.png";
 import { Link } from "react-router-dom";
 // import brainSvg from "../assets/brain.png";
 import bot from "../../assets/bot.json";
 import Lottie from "lottie-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import LoadContext from "../../context/LoadingProvider";
 
-const Home = () => {
+const Home = ({ timeline1 }) => {
+  const homeRef = useRef();
+  const { isLoading } = useContext(LoadContext);
+
+  useGSAP(() => {
+    if (isLoading === false) {
+      timeline1.from(homeRef?.current, {
+        opacity: 0,
+        scale: 0.9,
+        duration: 1,
+      });
+    }
+  }, [isLoading]);
+
   let pric = null;
   useEffect(() => {
     pric = document.body.querySelector("#pricId");
   }, []);
+
   return (
     <div className="min-h-screen relative overflow-hidden ">
-      <div className="relative h-screen flex justify-center items-center">
+      <div
+        ref={homeRef}
+        className="relative h-screen flex justify-center items-center"
+      >
         <div className="absolute bottom-0 dark:[mask-image:radial-gradient(50%_30%_at_50%_30%,black,transparent)] left-0 dark:bg-[#581c87] right-0 top-0 md:dark:[mask-image:radial-gradient(30%_40%_at_50%_35%,black,transparent)] "></div>
         <div className="z-10 w-full mb-[20vh] md:mb-[10vh] lg:mb-0 lg:mt-24 md:w-3/4 lg:w-2/3 ">
           <h1 className="text-4xl md:text-6xl xl:text-8xl text-center font-bold bg-gradient-to-r from-purple-700 via-blue-300 to-orange-400 text-transparent bg-clip-text animate-gradient pb-3">

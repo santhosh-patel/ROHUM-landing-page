@@ -8,8 +8,6 @@ html {
   scroll-behavior: smooth;
 }
 * {
-    /* padding: 0; */
-    /* margin: 0; */
     font-family: "Poppins", "Courier New";
     box-sizing: border-box;
   }
@@ -352,3 +350,4 @@ inherits: false;
     scale: 1.1;
   }
 }
+
