@@ -5,7 +5,6 @@ import { FaLocationDot, FaPhone, FaXTwitter } from "react-icons/fa6";
 // import { CiMail } from "react-icons/ci";
 import { IoMail } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import logo from "../assets/rohum_logo.png";
 
 const Footer = () => {
   let feat = null;
