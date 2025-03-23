@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import rohum_logo from "../assets/Rohum_logo.png";
 import gsap from "gsap";
 import { motion } from "framer-motion";
 import { useGSAP } from "@gsap/react";

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext, useRef } from "react";
-import rohum_logo from "../assets/Rohum_logo.png";
+import rohum_logo from "../assets/RohumLogo.png";
 import { useNavigate } from "react-router-dom";
 import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
 import { motion, AnimatePresence } from "framer-motion";
