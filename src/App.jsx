@@ -31,7 +31,7 @@ const App = () => {
             path="/"
             element={
               <>
-                <Home timeline1={timeline1} />
+                <Home />
                 <CubePage />
                 <Features />
                 <Services setserviceIndex={setserviceIndex} />

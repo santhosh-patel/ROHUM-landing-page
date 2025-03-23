@@ -36,7 +36,7 @@ const Loader = () => {
           ref={paraRef}
           className="text-center text-white/80 text-sm"
         >
-          {"Loading the experience".split("").map((el, i) => (
+          {"Initialising Avatar Space".split("").map((el, i) => (
             <span key={i}>{el}</span>
           ))}
         </p>
