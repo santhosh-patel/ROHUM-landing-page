@@ -1,12 +1,33 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import { Canvas } from "@react-three/fiber";
-import { useVideoTexture, OrbitControls, Environment } from "@react-three/drei";
+import LoadContext from "../context/LoadingProvider";
+import {
+  useVideoTexture,
+  OrbitControls,
+  Environment,
+  useProgress,
+} from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
 // https://chatgpt.com/c/67bfca81-fe80-8007-aba5-d585bf24df2a
 
 const CubeModel = ({ visibleFace, setVisibleFace, Ishoverd, setIshoverd }) => {
+  const { progress } = useProgress();
+  const { isLoading, setisLoading } = useContext(LoadContext);
+
+  useEffect(() => {
+    let timer1 = null;
+    console.log(progress);
+
+    if (progress === 100) {
+      timer1 = setTimeout(() => setisLoading(false), 2000);
+    }
+    return () => {
+      if (timer1) clearTimeout(timer1);
+    };
+  }, [progress]);
+
   const [stopRotate, setstopRotate] = useState(false);
   return (
     <Canvas fallback={<div>Sorry no WebGL supported!</div>}>

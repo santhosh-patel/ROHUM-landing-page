@@ -1,7 +1,7 @@
 import React from "react";
-import SectionHeading from "../Components/SectionHeading";
+import SectionHeading from "../SectionHeading";
 import Lottie from "lottie-react";
-import animated_section from "../assets/contact-svg.json";
+import animated_section from "../../assets/contact-svg.json";
 
 const Contact = () => {
   return (
@@ -12,8 +12,8 @@ const Contact = () => {
         mainHeading="Talk With Us"
       />
       <div className="bg-white/50 w-full mt-5 py-20 bg-[radial-gradient(#ffffff33_1px,#000000FF_1px)] bg-[size:20px_20px]">
-        <div className="w-full md:w-[90%] lg:w-3/4 mx-auto border border-[hsl(var(--border))] p-2 md:p-5 lg:p-10 rounded-2xl backdrop-blur-[1px] flex justify-center items-center">
-          <form className="border w-full md:w-[45%] p-4 rounded-xl border-[hsl(var(--border))] ">
+        <div className="w-full md:w-[90%] lg:w-3/4 mx-auto border border-[hsl(var(--border))] p-2 md:p-5 lg:p-10 rounded-2xl backdrop-blur-md flex justify-center items-center">
+          <form className="border bg-purple-950/20 w-full md:w-[45%] p-4 rounded-xl border-[hsl(var(--border))] ">
             <label
               htmlFor="email"
               className="text-[var(--purple-foreground)] text-sm  font-semibold"
@@ -22,7 +22,7 @@ const Contact = () => {
             </label>
             <input
               id="name"
-              className="mt-2 block border placeholder:text-gray-600 bg-black border-[hsl(var(--border))] rounded-[0.5rem] py-3 text-xs focus:outline-none mb-2 duration-200 text-white pl-2 w-full"
+              className="mt-2 block border placeholder:text-gray-600 bg-transparent border-[hsl(var(--border))] rounded-[0.5rem] py-3 text-xs focus:outline-none mb-2 duration-200 text-white pl-2 w-full"
               type="text"
               required
               placeholder="Enter your name"
@@ -37,7 +37,7 @@ const Contact = () => {
             </label>
             <input
               id="email"
-              className="mt-2 block border placeholder:text-gray-600 bg-black border-[hsl(var(--border))] rounded-[0.5rem] py-3 text-xs focus:outline-none mb-2 duration-200 text-white pl-2 w-full "
+              className="mt-2 block border placeholder:text-gray-600 bg-transparent border-[hsl(var(--border))] rounded-[0.5rem] py-3 text-xs focus:outline-none mb-2 duration-200 text-white pl-2 w-full "
               type="email"
               required
               placeholder="Enter your email"
@@ -52,7 +52,7 @@ const Contact = () => {
             </label>
             <input
               id="phoneNo"
-              className="mt-2 block border placeholder:text-gray-600 bg-black border-[hsl(var(--border))] rounded-[0.5rem] py-3 text-xs focus:outline-none mb-2 duration-200 text-white pl-2 w-full "
+              className="mt-2 block border placeholder:text-gray-600 bg-transparent border-[hsl(var(--border))] rounded-[0.5rem] py-3 text-xs focus:outline-none mb-2 duration-200 text-white pl-2 w-full "
               type="tel"
               required
               placeholder="Enter your phone number"
@@ -68,7 +68,7 @@ const Contact = () => {
             </label>
             <textarea
               id="msg"
-              className="mt-2 min-h-24 block border placeholder:text-gray-600 bg-black border-[hsl(var(--border))] rounded-[0.5rem] py-3 text-xs focus:outline-none mb-2 duration-200 text-white pl-2 w-full "
+              className="mt-2 min-h-24 block border placeholder:text-gray-600 bg-transparent border-[hsl(var(--border))] rounded-[0.5rem] py-3 text-xs focus:outline-none mb-2 duration-200 text-white pl-2 w-full "
               required
               placeholder="I am really instrested in your product..."
               // aria-invalid={validEmail ? "true" : "false"}

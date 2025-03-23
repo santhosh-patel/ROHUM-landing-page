@@ -1,6 +1,6 @@
 import React from "react";
-import SectionHeading from "../Components/SectionHeading";
-import PricingTabs from "../Components/PricingTabs";
+import SectionHeading from "../SectionHeading";
+import PricingTabs from "../PricingTabs";
 
 const Pricing = () => {
   return (

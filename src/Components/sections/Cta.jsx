@@ -1,9 +1,9 @@
 import React from "react";
-import Circles from "../Components/Circles";
+import Circles from "../Circles";
 
 const Cta = () => {
   return (
-    <div className="min-h-screen lg:h-[150vh] relative flex justify-center items-center pt-12 overflow-hidden">
+    <div className="min-h-screen mt-20 lg:h-[100vh] relative flex justify-center items-center pt-24 overflow-hidden">
       <Circles />
       <div className="fade-gradient top-0 left-0 absolute h-full w-full "></div>
       <div className="z-20">

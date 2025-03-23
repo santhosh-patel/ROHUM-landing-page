@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import award from "../assets/awardpng.png";
+import award from "../../assets/awardpng.png";
 // import chipSvg from "../assets/chip.png";
 import { Link } from "react-router-dom";
 // import brainSvg from "../assets/brain.png";
-import bot from "../assets/bot.json";
+import bot from "../../assets/bot.json";
 import Lottie from "lottie-react";
 
 const Home = () => {

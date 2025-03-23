@@ -8,7 +8,7 @@ import { FaEthereum } from "react-icons/fa";
 import { GiMoneyStack } from "react-icons/gi";
 import { GiTeacher } from "react-icons/gi";
 import { motion } from "framer-motion";
-import SectionHeading from "../Components/SectionHeading";
+import SectionHeading from "../SectionHeading";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 

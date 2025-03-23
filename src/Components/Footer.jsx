@@ -1,5 +1,6 @@
 import React from "react";
 import { FaInstagram, FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import { FaLocationDot, FaPhone, FaXTwitter } from "react-icons/fa6";
 // import { CiMail } from "react-icons/ci";
 import { IoMail } from "react-icons/io5";
@@ -7,11 +8,15 @@ import { Link } from "react-router-dom";
 import logo from "../assets/rohum_logo.png";
 
 const Footer = () => {
+  let feat = null;
+  let ser = null;
+  let pric = null;
+  let cont = null;
   return (
     <footer className="bg-black mt-24">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
-          <div className="mb-6 lg:pl-5 md:mb-0">
+          <div className="mb-10 lg:pl-5 md:mb-0">
             <a href="" className="flex items-center mb-8">
               {/* <img src={logo} className="h-9 me-3" alt="Rohum Logo" /> */}
               <span className=" text-4xl saiba-font [text-shadow:3px_3px_purple]">
@@ -28,29 +33,67 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-2 justify-start">
               <IoMail className="text-xl" />
-              <span className="text-sm text-gray-300">info@rohum.tech</span>
+              <a
+                href="mailto:info@rohum.tech"
+                target="_blank"
+                className="text-sm text-gray-300 hover:underline cursor-pointer underline-offset-4"
+              >
+                info@rohum.tech
+              </a>
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                services
+                quick links
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 font-medium">
+              <ul className="text-gray-500 text-sm lg:text-base dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
-                    className="hover:underline underline-offset-4"
+                    // href="https://github.com/themesberg/flowbite"
+                    className="hover:underline cursor-pointer underline-offset-4"
                   >
-                    tool1
+                    Home
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    // href="https://github.com/themesberg/flowbite"
+                    className="hover:underline cursor-pointer underline-offset-4"
+                  >
+                    Features
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    // href="https://github.com/themesberg/flowbite"
+                    className="hover:underline cursor-pointer underline-offset-4"
+                  >
+                    Services
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    // href="https://github.com/themesberg/flowbite"
+                    className="hover:underline cursor-pointer underline-offset-4"
+                  >
+                    Pricing
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    // href="https://github.com/themesberg/flowbite"
+                    className="hover:underline cursor-pointer underline-offset-4"
+                  >
+                    Contact Us
                   </a>
                 </li>
                 <li>
                   <a
                     href="https://discord.gg/4eeurUVvTy"
-                    className="hover:underline underline-offset-4"
+                    className="hover:underline cursor-pointer underline-offset-4"
                   >
-                    tool2
+                    FAQS
                   </a>
                 </li>
               </ul>
@@ -108,6 +151,14 @@ const Footer = () => {
                     href="https://tailwindcss.com/"
                     className="hover:underline underline-offset-4"
                   >
+                    Newsletter
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="https://tailwindcss.com/"
+                    className="hover:underline underline-offset-4"
+                  >
                     Learning Center
                   </a>
                 </li>
@@ -156,11 +207,22 @@ const Footer = () => {
             </a>
             . All Rights Reserved.
           </span>
-          <div className="flex mt-4 sm:justify-center gap-4 sm:mt-0">
-            <FaFacebook className="text-2xl text-gray-500 hover:text-white duration-150" />
-            <FaInstagram className="text-2xl text-gray-500 hover:text-white duration-150" />
-            <FaXTwitter className="text-2xl text-gray-500 hover:text-white duration-150" />
-            <FaLinkedin className="text-2xl text-gray-500 hover:text-white duration-150" />
+          <div className="flex mt-4 sm:justify-center items-center gap-4 sm:mt-0">
+            <a href="https://www.youtube.com/@ROHUM-ai" target="_blank">
+              <FaYoutube className="text-[28px] text-gray-500 hover:text-white duration-150" />
+            </a>
+            <a href="">
+              <FaFacebook className="text-2xl text-gray-500 hover:text-white duration-150" />
+            </a>
+            <a href="https://www.instagram.com/rohum.tech" target="_blank">
+              <FaInstagram className="text-2xl text-gray-500 hover:text-white duration-150" />
+            </a>
+            <a href="https://x.com/rohum_ai" target="_blank">
+              <FaXTwitter className="text-2xl text-gray-500 hover:text-white duration-150" />
+            </a>
+            <a href="https://www.linkedin.com/company/rohum" target="_blank">
+              <FaLinkedin className="text-2xl text-gray-500 hover:text-white duration-150" />
+            </a>
           </div>
         </div>
       </div>

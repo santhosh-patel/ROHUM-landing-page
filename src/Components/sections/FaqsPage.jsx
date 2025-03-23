@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import SectionHeading from "../Components/SectionHeading";
+import SectionHeading from "../SectionHeading";
 import { AnimatePresence, motion } from "framer-motion";
-import FaqsSmall from "../Components/FaqsSmall";
+import FaqsSmall from "../FaqsSmall";
 
 const FaqsPage = () => {
   const [IshHovered, setIshHovered] = useState([

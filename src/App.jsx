@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import Navbar from "./Components/Navbar";
-import Home from "./Pages/Home";
-import Carousel from "./Components/Carousel";
-import Services from "./Pages/Services";
-import Features from "./Pages/Features";
-import CubePage from "./Pages/CubePage";
-import Pricing from "./Pages/Pricing";
-import FaqsPage from "./Pages/FaqsPage";
-import Cta from "./Pages/Cta";
+import React, { useEffect, useState } from "react";
+import Home from "./Components/sections/Home";
+import Services from "./Components/sections/Services";
+import Features from "./Components/sections/Features";
+import CubePage from "./Components/sections/CubePage";
+import Pricing from "./Components/sections/Pricing";
+import FaqsPage from "./Components/sections/FaqsPage";
+import Cta from "./Components/sections/Cta";
 import Footer from "./Components/Footer";
 import Navbar2 from "./Components/Navbar2";
 import { Routes, Route } from "react-router-dom";
@@ -15,31 +13,35 @@ import MoreServices from "./Pages/MoreServices";
 import ComingSoon from "./Pages/ComingSoon";
 import Terms from "./Pages/Terms";
 import Policy from "./Pages/Policy";
-import Contact from "./Pages/Contact";
+import Contact from "./Components/sections/Contact";
+import CheckLoaded from "./Components/CheckLoaded";
 
 const App = () => {
   const [serviceIndex, setserviceIndex] = useState(0);
+
   return (
-    <main className="text-[var(--foreground)] bg-[var(--background)] relative w-full min-h-screen max-w-screen-2xl border border-[hsl(var(--border))] overflow-hidden ">
+    <main className="text-[var(--foreground)] bg-[var(--background)] relative w-full min-h-screen max-w-screen-2xl border border-[hsl(var(--border))] overflow-hidden">
       {/* <Navbar /> */}
       <Navbar2 />
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Home />
-              {/* <Carousel /> */}
-              <CubePage />
-              <Features />
-              <Services setserviceIndex={setserviceIndex} />
-              <Cta />
-              <Pricing />
-              <Contact />
-              <FaqsPage />
-            </>
-          }
-        />
+        <Route element={<CheckLoaded />}>
+          <Route
+            path="/"
+            element={
+              <>
+                <Home />
+                <CubePage />
+                <Features />
+                <Services setserviceIndex={setserviceIndex} />
+                <Cta />
+                <Pricing />
+                <Contact />
+                <FaqsPage />
+              </>
+            }
+          />
+        </Route>
+
         <Route
           path="/services/:id"
           element={<MoreServices serviceIndex={serviceIndex} />}

@@ -3,6 +3,7 @@ import rohum_logo from "../assets/Rohum_logo.png";
 import { useNavigate } from "react-router-dom";
 import { TbLayoutSidebarLeftCollapse } from "react-icons/tb";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Navbar2 = () => {
   const [ToggleMenu, setToggleMenu] = useState(false);
@@ -23,7 +24,7 @@ const Navbar2 = () => {
         id="navbar"
         className="w-full flex bg-transparent px-4 py-4 justify-between z-40 fixed overflow-hidden top-0 backdrop-blur-md"
       >
-        <div className="flex gap-1 justify-center  items-center">
+        <div className="flex gap-1 justify-center cursor-default items-center">
           <div className="size-13 ">
             <img src={rohum_logo} alt="Rohum logo" />
           </div>
@@ -115,12 +116,15 @@ const Navbar2 = () => {
         </ul>
         {/* </div> */}
         <div className="flex items-center text-sm font-medium justify-center gap-3">
-          <button className="border px-4 py-[8px] rounded-md border-purple-950">
+          <button className="border px-4 py-[8px] hover:bg-purple-950 duration-150 hover:scale-105 rounded-md border-purple-950">
             Login
           </button>
-          <button className="hidden lg:block button button-primary border px-4 py-[9px] rounded-md border-purple-300/40">
+          <Link
+            to="/download"
+            className="hidden lg:block duration-150 button button-primary border px-4 py-[9px] rounded-md border-purple-300/40"
+          >
             Get Started
-          </button>
+          </Link>
           <div
             className={`lg:hidden border p-2 text-lg hover:bg-purple-950 duration-150 rounded-md border-purple-950 ${
               ToggleMenu ? "text-purple-600" : "text-white"
