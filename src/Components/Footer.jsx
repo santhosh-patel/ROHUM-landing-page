@@ -210,7 +210,10 @@ const Footer = () => {
             <a href="https://www.youtube.com/@ROHUM-ai" target="_blank">
               <FaYoutube className="text-[28px] text-gray-500 hover:text-white duration-150" />
             </a>
-            <a href="">
+            <a
+              href=" https://www.facebook.com/profile.php?id=61574500895806"
+              target="_blank"
+            >
               <FaFacebook className="text-2xl text-gray-500 hover:text-white duration-150" />
             </a>
             <a href="https://www.instagram.com/rohum.tech" target="_blank">
