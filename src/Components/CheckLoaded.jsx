@@ -13,7 +13,7 @@ const CheckLoaded = () => {
 
   return (
     <>
-      <AnimatePresence>{true && <Loader />}</AnimatePresence>
+      <AnimatePresence>{isLoading && <Loader />}</AnimatePresence>
       <Outlet />
     </>
   );

@@ -27,8 +27,17 @@ const Loader = () => {
     >
       <motion.div exit={{ opacity: 0 }}>
         {/* <img src={rohum_logo} alt="logo" className="size-15" /> */}
-        <h2 className="text-3xl saiba-font text-center font-bold">
-          Rohum<span className="text-5xl animate-pulse text-purple-800">.</span>
+        <h2
+          className="text-3xl saiba-font text-center font-bold"
+          style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 1)" }}
+        >
+          Rohum
+          <span
+            className="text-5xl animate-pulse text-purple-800"
+            style={{ textShadow: "none" }}
+          >
+            .
+          </span>
         </h2>
         <p
           id="loading-para"
