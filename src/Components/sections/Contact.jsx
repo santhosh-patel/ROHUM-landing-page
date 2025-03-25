@@ -50,15 +50,47 @@ const Contact = () => {
             >
               Phone No
             </label>
-            <input
-              id="phoneNo"
-              className="mt-2 block border placeholder:text-gray-600 bg-transparent border-[hsl(var(--border))] rounded-[0.5rem] py-3 text-xs focus:outline-none mb-2 duration-200 text-white pl-2 w-full "
-              type="tel"
-              required
-              placeholder="Enter your phone number"
-              // aria-invalid={validEmail ? "true" : "false"}
-              aria-describedby="emailnote"
-            />
+            <div className="mt-2 gap-2 items-center flex">
+              <select
+                id="cars"
+                className="text-xs text-gray-600 h-auto w-10"
+                name="cars"
+              >
+                <option
+                  className="bg-gray-600 text-white outline-none"
+                  value="volvo"
+                >
+                  +91
+                </option>
+                <option
+                  className="bg-gray-600 text-white outline-none"
+                  value="saab"
+                >
+                  Saab
+                </option>
+                <option
+                  className="bg-gray-600 text-white outline-none"
+                  value="fiat"
+                >
+                  Fiat
+                </option>
+                <option
+                  className="bg-gray-600 text-white outline-none"
+                  value="audi"
+                >
+                  Audi
+                </option>
+              </select>
+              <input
+                id="phoneNo"
+                className=" border placeholder:text-gray-600 bg-transparent border-[hsl(var(--border))] rounded-[0.5rem] py-3 text-xs focus:outline-none mb-2 duration-200 text-white pl-2 w-full "
+                type="tel"
+                required
+                placeholder="Enter your phone number"
+                // aria-invalid={validEmail ? "true" : "false"}
+                aria-describedby="emailnote"
+              />
+            </div>
 
             <label
               htmlFor="message"
