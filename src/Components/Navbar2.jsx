@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import LoadContext from "../context/LoadingProvider";
+import { useScroll, useMotionValueEvent } from "framer-motion";
 
 const Navbar2 = ({ timeline1 }) => {
   const [ToggleMenu, setToggleMenu] = useState(false);
@@ -19,6 +20,17 @@ const Navbar2 = ({ timeline1 }) => {
 
   const navRef = useRef();
   const { isLoading } = useContext(LoadContext);
+
+  const [HiddenNav, setHiddenNav] = useState(false);
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", (location) => {
+    const prevLoc = scrollY.getPrevious();
+    if (location > prevLoc && location > 100) {
+      setHiddenNav(true);
+    } else {
+      setHiddenNav(false);
+    }
+  });
 
   useGSAP(() => {
     if (isLoading === false) {
@@ -38,18 +50,22 @@ const Navbar2 = ({ timeline1 }) => {
 
   return (
     <>
-      <div
+      <motion.div
         ref={navRef}
         id="navbar"
+        variants={{ visible: { y: 0 }, hidden: { y: "-200%" } }}
+        animate={HiddenNav ? "hidden" : "visible"}
         className="w-full flex bg-transparent px-4 py-4 justify-between z-40 fixed overflow-hidden top-0 backdrop-blur-md"
       >
         <div className="flex gap-1 justify-center cursor-default items-center">
           <div className="size-13 ">
             <img src={rohum_logo} alt="Rohum logo" />
           </div>
-          <h2 className="text-2xl saiba-font [text-shadow:3px_3px_purple]">
-            Rohum
-          </h2>
+          <a href="#">
+            <h2 className="text-2xl saiba-font [text-shadow:3px_3px_purple]">
+              Rohum
+            </h2>
+          </a>
         </div>
         {/* <div className="border"> */}
         <ul className="hidden lg:flex items-center bg-white/5 absolute top-[50%] -translate-y-1/2 -translate-x-1/2 left-[50%]  text-sm gap-5 rounded-full py-3 px-5 border-white/40 border">
@@ -153,7 +169,7 @@ const Navbar2 = ({ timeline1 }) => {
             <TbLayoutSidebarLeftCollapse />
           </div>
         </div>
-      </div>
+      </motion.div>
       {/* sideMenu */}
       <AnimatePresence>
         {ToggleMenu && (
