@@ -4,3 +4,4 @@
     Loader
     Footer updating
     make the policy section responsive
+    Have to add an error popup for on submit errors

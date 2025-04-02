@@ -41,14 +41,14 @@ const Contact = () => {
   useEffect(() => {
     const result = NAME_REGEX.test(Name);
     setvalidName(result);
-    console.log(result);
+    // console.log(result);
   }, [Name]);
 
   useEffect(() => {
-    console.log(Phone1 + Phone2);
+    // console.log(Phone1 + Phone2);
     const result = PHONE_REGEX.test(Phone1 + Phone2);
     setvalidPhone(result);
-    console.log(result);
+    // console.log(result);
   }, [Phone1, Phone2]);
 
   const handleSubmit = async (e) => {
@@ -67,9 +67,9 @@ const Contact = () => {
         withCredentials: true,
       });
       if (response.status === 200) setisSuccess(true);
-      console.log(response);
+      // console.log(response);
     } catch (error) {
-      console.log(error.response.data);
+      // console.log(error.response.data);
     } finally {
       setisLoading(false);
     }

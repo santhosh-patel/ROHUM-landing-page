@@ -31,12 +31,12 @@ const App = () => {
             path="/"
             element={
               <>
+                <Home />
                 <CubePage />
-                {/* <Home />
                 <Features />
                 <Services setserviceIndex={setserviceIndex} />
                 <Cta />
-                <Pricing /> */}
+                <Pricing />
                 <Contact />
                 <FaqsPage />
               </>
