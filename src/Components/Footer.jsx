@@ -89,7 +89,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    // href="https://discord.gg/4eeurUVvTy"
                     className="hover:underline cursor-pointer underline-offset-4"
                   >
                     FAQS
@@ -103,30 +103,36 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="" className="hover:underline underline-offset-4">
+                  <Link
+                    to={"/download"}
+                    className="hover:underline underline-offset-4"
+                  >
                     Advertising
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="" className="hover:underline underline-offset-4">
+                  <Link
+                    to={"/download"}
+                    className="hover:underline underline-offset-4"
+                  >
                     Affilifate marketing
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
+                  <Link
+                    to={"/download"}
                     className="hover:underline underline-offset-4"
                   >
                     Education
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
+                  <Link
+                    to={"/download"}
                     className="hover:underline underline-offset-4"
                   >
-                    AI live stream
-                  </a>
+                    AI Live Stream
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -136,38 +142,44 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="" className="hover:underline underline-offset-4">
+                  <Link
+                    to={"/download"}
+                    className="hover:underline underline-offset-4"
+                  >
                     Blogs
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="" className="hover:underline underline-offset-4">
+                  <Link
+                    to={"/download"}
+                    className="hover:underline underline-offset-4"
+                  >
                     Affiliate Program
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
+                  <Link
+                    to={"/download"}
                     className="hover:underline underline-offset-4"
                   >
                     Newsletter
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a
-                    href="https://tailwindcss.com/"
+                  <Link
+                    to={"/download"}
                     className="hover:underline underline-offset-4"
                   >
                     Learning Center
-                  </a>
+                  </Link>
                 </li>
                 <li className="">
-                  <a
-                    href="https://tailwindcss.com/"
+                  <Link
+                    to={"/download"}
                     className="hover:underline underline-offset-4"
                   >
                     Alternative
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
