@@ -4,7 +4,7 @@ import Lottie from "lottie-react";
 import emailAxios from "../../api/email.api";
 // import dotenv from "dotenv";
 import animated_section from "../../assets/contact-svg.json";
-import EmailSubmitPopup from "../popups/emailSubmitPopup";
+import EmailSubmitPopup from "../popups/EmailSubmitPopup";
 const NAME_REGEX = /^[A-Za-z ]{4,}$/;
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_REGEX = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
