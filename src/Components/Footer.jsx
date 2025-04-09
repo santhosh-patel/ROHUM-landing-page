@@ -11,6 +11,7 @@ const Footer = () => {
   let ser = null;
   let pric = null;
   let cont = null;
+  let faqs = null;
   return (
     <footer className="bg-black mt-24">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -51,6 +52,13 @@ const Footer = () => {
                   <a
                     // href="https://github.com/themesberg/flowbite"
                     className="hover:underline cursor-pointer underline-offset-4"
+                    onClick={() => {
+                      navigate("/");
+                      window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                      });
+                    }}
                   >
                     Home
                   </a>
@@ -59,6 +67,19 @@ const Footer = () => {
                   <a
                     // href="https://github.com/themesberg/flowbite"
                     className="hover:underline cursor-pointer underline-offset-4"
+                    onClick={() => {
+                      feat = document.body.querySelector("#featId");
+                      if (feat) {
+                        const topPos =
+                          feat.getBoundingClientRect().top +
+                          window.scrollY -
+                          100;
+                        window.scrollTo({
+                          top: topPos,
+                          behavior: "smooth",
+                        });
+                      }
+                    }}
                   >
                     Features
                   </a>
@@ -67,6 +88,19 @@ const Footer = () => {
                   <a
                     // href="https://github.com/themesberg/flowbite"
                     className="hover:underline cursor-pointer underline-offset-4"
+                    onClick={() => {
+                      ser = document.body.querySelector("#serId");
+                      if (ser) {
+                        const topPos =
+                          ser.getBoundingClientRect().top +
+                          window.scrollY -
+                          100;
+                        window.scrollTo({
+                          top: topPos,
+                          behavior: "smooth",
+                        });
+                      }
+                    }}
                   >
                     Services
                   </a>
@@ -75,6 +109,20 @@ const Footer = () => {
                   <a
                     // href="https://github.com/themesberg/flowbite"
                     className="hover:underline cursor-pointer underline-offset-4"
+                    onClick={() => {
+                      pric = document.body.querySelector("#pricId");
+
+                      if (pric) {
+                        const topPos =
+                          pric.getBoundingClientRect().top +
+                          window.scrollY -
+                          100;
+                        window.scrollTo({
+                          top: topPos,
+                          behavior: "smooth",
+                        });
+                      }
+                    }}
                   >
                     Pricing
                   </a>
@@ -83,6 +131,20 @@ const Footer = () => {
                   <a
                     // href="https://github.com/themesberg/flowbite"
                     className="hover:underline cursor-pointer underline-offset-4"
+                    onClick={() => {
+                      cont = document.body.querySelector("#contId");
+
+                      if (cont) {
+                        const topPos =
+                          cont.getBoundingClientRect().top +
+                          window.scrollY -
+                          100;
+                        window.scrollTo({
+                          top: topPos,
+                          behavior: "smooth",
+                        });
+                      }
+                    }}
                   >
                     Contact Us
                   </a>
@@ -91,6 +153,20 @@ const Footer = () => {
                   <a
                     // href="https://discord.gg/4eeurUVvTy"
                     className="hover:underline cursor-pointer underline-offset-4"
+                    onClick={() => {
+                      faqs = document.body.querySelector("#faqs");
+
+                      if (faqs) {
+                        const topPos =
+                          faqs.getBoundingClientRect().top +
+                          window.scrollY -
+                          100;
+                        window.scrollTo({
+                          top: topPos,
+                          behavior: "smooth",
+                        });
+                      }
+                    }}
                   >
                     FAQS
                   </a>

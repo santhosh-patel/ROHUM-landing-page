@@ -27,7 +27,11 @@ const FaqsPage = () => {
 
   return (
     <div className="mt-20 min-h-screen">
-      <SectionHeading smallHeading="FAQS" mainHeading="Have a Question?" />
+      <SectionHeading
+        id={"faqs"}
+        smallHeading="FAQS"
+        mainHeading="Have a Question?"
+      />
 
       <div className="hidden md:grid gap-3 relative grid-cols-10 px-1 lg:px-2 grid-rows-4 mt-20 w-full mx-auto">
         <div className="semi-light absolute"></div>

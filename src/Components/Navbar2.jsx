@@ -158,7 +158,7 @@ const Navbar2 = ({ timeline1 }) => {
             to="/download"
             className="hidden lg:block duration-150 button button-primary border px-4 py-[9px] rounded-md border-purple-300/40"
           >
-            Get Started
+            Demo
           </Link>
           <div
             className={`lg:hidden border p-2 text-lg hover:bg-purple-950 duration-150 rounded-md border-purple-950 ${
