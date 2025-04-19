@@ -30,7 +30,7 @@ const CubeModel = ({ visibleFace, setVisibleFace, Ishoverd, setIshoverd }) => {
 
   const [stopRotate, setstopRotate] = useState(false);
   return (
-    <Canvas fallback={<div>Sorry no WebGL supported!</div>}>
+    <Canvas className="cube" fallback={<div>Sorry no WebGL supported!</div>}>
       <ambientLight intensity={1} />
       <Environment preset="city" />
       <Cube
@@ -108,6 +108,7 @@ const Cube = ({
       }}
       ref={cubeRef}
       onPointerLeave={() => setstopRotate(false)}
+      // onPointerDown={() => console.log("clicked")}
     >
       <boxGeometry args={[3.5, 3.5, 3.5]} />
       <meshPhysicalMaterial
