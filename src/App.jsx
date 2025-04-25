@@ -21,9 +21,23 @@ const App = () => {
   const [serviceIndex, setserviceIndex] = useState(0);
   const timeline1 = gsap.timeline();
 
+  // Add the Zapier script dynamically when the App component mounts
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js";
+    script.type = "module";
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Cleanup the script when the component unmounts
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
     <main className="text-[var(--foreground)] bg-[var(--background)] relative w-full min-h-screen max-w-screen-2xl border border-[hsl(var(--border))] overflow-hidden">
-      {/* <Navbar /> */}
       <Navbar2 timeline1={timeline1} />
       <Routes>
         <Route element={<CheckLoaded />}>
@@ -43,8 +57,7 @@ const App = () => {
             }
           />
         </Route>
-        <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
-<zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cm9wbfvpc006ccs8w4yupcchy'></zapier-interfaces-chatbot-embed>
+
         <Route
           path="/services/:id"
           element={<MoreServices serviceIndex={serviceIndex} />}
@@ -55,6 +68,11 @@ const App = () => {
         <Route path="*" element={<>404</>} />
       </Routes>
       <Footer />
+      {/* Add the Zapier chatbot embed element here */}
+      <zapier-interfaces-chatbot-embed
+        is-popup="true"
+        chatbot-id="cm9wbfvpc006ccs8w4yupcchy"
+      ></zapier-interfaces-chatbot-embed>
     </main>
   );
 };
