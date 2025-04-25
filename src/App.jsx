@@ -43,7 +43,8 @@ const App = () => {
             }
           />
         </Route>
-
+        <script async type='module' src='https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js'></script>
+<zapier-interfaces-chatbot-embed is-popup='true' chatbot-id='cm9wbfvpc006ccs8w4yupcchy'></zapier-interfaces-chatbot-embed>
         <Route
           path="/services/:id"
           element={<MoreServices serviceIndex={serviceIndex} />}
