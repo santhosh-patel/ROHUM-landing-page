@@ -20,17 +20,17 @@ import gsap from "gsap";
 const App = () => {
   const [serviceIndex, setserviceIndex] = useState(0);
   const timeline1 = gsap.timeline();
+  const [scriptLoaded, setScriptLoaded] = useState(false);
 
-  // Add the Zapier script dynamically when the App component mounts
   useEffect(() => {
     const script = document.createElement("script");
     script.src =
       "https://interfaces.zapier.com/assets/web-components/zapier-interfaces/zapier-interfaces.esm.js";
     script.type = "module";
     script.async = true;
+    script.onload = () => setScriptLoaded(true); // Set state when script loads
     document.head.appendChild(script);
 
-    // Cleanup the script when the component unmounts
     return () => {
       document.head.removeChild(script);
     };
@@ -68,11 +68,13 @@ const App = () => {
         <Route path="*" element={<>404</>} />
       </Routes>
       <Footer />
-      {/* Add the Zapier chatbot embed element here */}
-      <zapier-interfaces-chatbot-embed
-        is-popup="true"
-        chatbot-id="cm9wbfvpc006ccs8w4yupcchy"
-      ></zapier-interfaces-chatbot-embed>
+      {scriptLoaded && (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `<zapier-interfaces-chatbot-embed is-popup="true" chatbot-id="cm9wbfvpc006ccs8w4yupcchy"></zapier-interfaces-chatbot-embed>`,
+          }}
+        />
+      )}
     </main>
   );
 };
